@@ -32,7 +32,7 @@ namespace FindRestaurant.Controllers
       }
       catch
       {
-        System.Console.WriteLine("Somebody dropped the baby!");
+        System.Console.WriteLine("Well that didnt work! :(");
         return View("Index");
       }
     }

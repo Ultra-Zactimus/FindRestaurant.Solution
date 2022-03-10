@@ -33,12 +33,6 @@ namespace FindRestaurant.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
-    // public ActionResult Details(int id)
-    // {
-    //   Restaurant thisRestaurant = _db.Restaurant.FirstOrDefault(Restaurant => Restaurant.RestaurantId == id);
-    //   return View(thisRestaurant);
-    // }
     public ActionResult Edit(int id)
     {
       var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
