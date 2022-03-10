@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+@using FindRestaurant.Models;
+@model FindRestaurant.Models.Food;
+
+<h1>Items</h1>
+
+@if (@Model.Restaurants.Count == 0)
+{
+  <h3>No ress have been added yet!</h3>
+} 
+
+@foreach (Restaurant res in Model.Restaurants)
+{
+  <h3>@Html.ActionLink($"{res.Name}", "Details", new { id = res.RestaurantId }) | @res.Food.Description</h3>
+}
+
+<p>@Html.ActionLink("Add new item", "Create")</p>
